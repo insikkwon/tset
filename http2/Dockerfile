@@ -6,7 +6,7 @@ COPY ./cert/fullchain.pem /etc/letsencrypt/live/tset.ncpkis.com/fullchain.pem
 COPY ./cert/privkey.pem /etc/letsencrypt/live/tset.ncpkis.com/privkey.pem
 COPY ./cert/options-ssl-nginx.conf /etc/letsencrypt/options-ssl-nginx.conf
 COPY ./cert/ssl-dhparams.pem /etc/letsencrypt/ssl-dhparams.pem
-COPY ./default /etc/nginx/sites-available/default
+COPY ./default.conf /etc/nginx/conf.d/default.conf
 
 
 CMD ["nginx", "-g", "daemon off;"]
